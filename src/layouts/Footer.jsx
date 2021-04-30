@@ -15,12 +15,10 @@ export default function Footer() {
     <Wrapper>
       <Content>
         <div>
-          <img src={Logo} alt="" />
+          <img src={Logo} alt="Brand Logo" />
           <FooterLinks>
             {navItems.map((el) => (
-              <Links href="#" key={uuidv4()}>
-                {el}
-              </Links>
+              <Links key={uuidv4()}>{el}</Links>
             ))}
           </FooterLinks>
         </div>

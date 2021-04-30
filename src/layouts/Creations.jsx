@@ -16,9 +16,7 @@ export default function Creations() {
             <GridItem item={item} key={uuidv4()} />
           ))}
         </Grid>
-        <CreationsButton href="#" alt="See All">
-          See all
-        </CreationsButton>
+        <CreationsButton href="#">See all</CreationsButton>
       </Content>
     </Wrapper>
   )
