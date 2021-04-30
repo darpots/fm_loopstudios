@@ -63,7 +63,7 @@ const TextContainer = styled.section`
     padding-left: 6rem;
 `
 
-const Heading = styled.h1`
+const Heading = styled.h2`
   font-size: 2rem;
   font-weight: 300;
   line-height: 2rem;
