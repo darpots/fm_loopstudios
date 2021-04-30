@@ -1,3 +1,3 @@
 export default {
-  external: ['styled-components'],
+  external: ['styled-components', 'react-is'],
 }
