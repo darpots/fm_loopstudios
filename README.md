@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- View Code URL: [https://github.com/darpots/fm_loopstudios](https://github.com/darpots/fm_loopstudios)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
