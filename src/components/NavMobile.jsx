@@ -36,7 +36,7 @@ const Wrapper = styled.div`
   bottom: 0;
   animation-name: ${fadeIn};
   animation-duration: 300ms;
-  height: 110vh;
+  height: 100vh;
 `
 
 const NavMenu = styled.nav`
