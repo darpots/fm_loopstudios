@@ -50,4 +50,8 @@ const Heading = styled.h1`
   text-transform: uppercase;
   color: var(--black);
   margin-bottom: 3rem;
+  ${DesktopMQ} {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
 `
