@@ -68,7 +68,7 @@ const ItemText = styled.h2`
   bottom: 1.25rem;
   left: 1.25rem;
   width: 7.8125rem;
-  z-index: 10;
+  z-index: 7;
 
   ${DesktopMQ} {
     font-size: 2rem;

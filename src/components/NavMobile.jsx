@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 import { v4 as uuidv4 } from 'uuid'
 import { navItems } from '../data/data'
+import { NavLink } from './Links'
 
 export default function NavMobile() {
   return (
@@ -26,7 +27,8 @@ const fadeIn = keyframes`
 `
 
 const Wrapper = styled.div`
-  position: absolute;
+  position: fixed;
+  z-index: 9;
   background: black;
   top: 0;
   right: 0;
@@ -43,23 +45,4 @@ const NavMenu = styled.nav`
   width: 8.0625rem;
   left: 6.4%;
   top: 13.9375rem;
-`
-
-const NavLink = styled.a`
-  display: block;
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: 300;
-  font-size: 1.5rem;
-  line-height: 1.5625rem;
-  text-transform: uppercase;
-  color: var(--white);
-  text-decoration: none;
-
-  &:hover {
-    color: var(--darkGrey);
-  }
-
-  & + * {
-    margin-top: 1.5rem;
-  }
 `
