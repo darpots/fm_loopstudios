@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { v4 as uuidv4 } from 'uuid'
 
 import Logo from '../images/logo.svg'
@@ -8,6 +8,7 @@ import Twitter from '../icons/icon-twitter.svg?component'
 import Pinterest from '../icons/icon-pinterest.svg?component'
 import Instagram from '../icons/icon-facebook.svg?component'
 import { DesktopMQ } from '../data/mediaQueries'
+import { StdLink } from '../components/Links'
 
 export default function Footer() {
   const date = new Date()
@@ -16,18 +17,26 @@ export default function Footer() {
       <Content>
         <div>
           <img src={Logo} alt="Brand Logo" />
-          <FooterLinks>
-            {navItems.map((el) => (
-              <Links key={uuidv4()}>{el}</Links>
-            ))}
-          </FooterLinks>
+          {navItems.map((el) => (
+            <FooterLinks>
+              <StdLink key={uuidv4()}>{el}</StdLink>
+            </FooterLinks>
+          ))}
         </div>
         <div>
           <LogoStrip>
-            <Facebook />
-            <Twitter />
-            <Pinterest />
-            <Instagram />
+            <StdLink>
+              <Facebook />
+            </StdLink>
+            <StdLink>
+              <Twitter />
+            </StdLink>
+            <StdLink>
+              <Pinterest />
+            </StdLink>
+            <StdLink>
+              <Instagram />
+            </StdLink>
           </LogoStrip>
           <Copyright>
             &copy; {date.getFullYear()} Loopstudios. All rights reserved.
@@ -68,44 +77,11 @@ const Content = styled.div`
 `
 
 const FooterLinks = styled.div`
-  margin: 3.5rem 0 3rem;
-
-  ${DesktopMQ} {
-    text-align: left;
-    margin: 0 0 1.5rem;
-  }
-`
-
-const Grow = keyframes`
-  from {
-    width: 0;
-  }
-  to {
-    width: var(--width);
-  }
-`
-
-const Links = styled.div`
-  font-size: 0.9375rem;
-  line-height: 1.5625rem;
-  color: var(--white);
   margin-bottom: 1rem;
-  cursor: pointer;
   ${DesktopMQ} {
-    display: inline-block;
-    position: relative;
+    display: inline;
+    text-align: left;
     margin-right: 2rem;
-    margin-bottom: 0;
-
-    &:hover::after {
-      --width: 1.5rem;
-      content: '';
-      position: absolute;
-      bottom: -0.5rem;
-      animation: ${Grow} 500ms forwards;
-      left: calc(50% - (var(--width) / 2));
-      border-bottom: 0.125rem solid var(--white);
-    }
   }
 `
 
@@ -115,7 +91,7 @@ const LogoStrip = styled.div`
     text-align: right;
   }
   svg {
-    margin: 0 0.5rem;
+    margin: 0 -0.5rem;
   }
 `
 const Copyright = styled.div`
