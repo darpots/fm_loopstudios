@@ -16,6 +16,16 @@ const Wrapper = styled.div`
   left: 0;
   bottom: 0;
   right: 0;
+  &:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(var(--black), var(--black));
+    opacity: 0.35;
+  }
 `
 const Desktop = styled.img`
   display: none;
