@@ -13,6 +13,9 @@ export const Button = styled.a`
   transition: background 300ms ease-in-out;
   cursor: pointer;
   text-decoration: none;
+  &:link {
+    color: var(--black);
+  }
   &:visited {
     color: var(--black);
   }
