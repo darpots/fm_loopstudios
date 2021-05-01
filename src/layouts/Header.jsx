@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 import ImageContainer from '../components/ImageContainer'
 import Logo from '../images/logo.svg?component'
-import NavDesktop from '../components/NavDesktop'
 import HamburgerButton from '../components/HamburgerButton'
 import NavMobile from '../components/NavMobile'
 import HeroText from '../components/HeroText'
@@ -11,6 +10,9 @@ import HeroText from '../components/HeroText'
 import mobileHero from '../images/mobile/image-hero.jpg'
 import desktopHero from '../images/desktop/image-hero.jpg'
 import { DesktopMQ, MobileBP } from '../data/mediaQueries'
+import { navItems } from '../data/data'
+import { StdLink } from '../components/Links'
+import { v4 as uuidv4 } from 'uuid'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -31,7 +33,13 @@ export default function Header() {
         <Content>
           <NavContainer>
             <Logo />
-            <NavDesktop />
+            <NavDesktop>
+              {navItems.map((el) => (
+                <StdLink href="#" key={uuidv4()}>
+                  {el}
+                </StdLink>
+              ))}
+            </NavDesktop>
             <HamburgerButton toggled={isOpen} toggle={setIsOpen} />
           </NavContainer>
           <HeroText />
@@ -68,5 +76,12 @@ const NavContainer = styled.div`
 
   ${DesktopMQ} {
     padding-top: 4.25rem;
+  }
+`
+
+const NavDesktop = styled.nav`
+  display: none;
+  ${DesktopMQ} {
+    display: block;
   }
 `

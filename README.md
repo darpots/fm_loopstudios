@@ -48,7 +48,9 @@ Started with the mobile version building each section then adding the desktop co
 
 ### What I learned
 
-Continuing to learn how to use Styled Components more effectivley. There are a few area's that can be tidied up and refactored, and there is some code duplication that needs to be erradicated. CSS Grid works well for the Card layout.
+Continuing to learn how to use Styled Components more effectively. There are a few area's that can be tidied up and refactored, and there is some code duplication that needs to be erradicated. CSS Grid works well for the Card layout.  
+
+Note: Update 1 May 21 / Removed duplicated code for the links and and ensured underline worked for all links, not just the Nav.  Noted design had a darker main image so added a transparent-black layer over the top. Also did a couple of other small tidy ups.
 
 ### Continued development
 
